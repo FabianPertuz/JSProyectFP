@@ -1,1 +1,87 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="scripts/main.js"></script>
+  <title>TerminaV</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>TerminaV</h1>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search products...">
+      <button id="search-btn">Search</button>
+    </div>
+
+<button id="cart-toggle" class="cart-toggle">Cart (<span id="cart-count">0</span>)</button>
+
+
+<aside class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button id="close-cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+
+  </div>
+  <div class="cart-total">
+    <p>Total: <span id="cart-total-amount">$0.00</span></p>
+    <button id="checkout-btn">Checkout</button>
+  </div>
+</aside>
+  </header>
+
+  <aside class="filters">
+    <h2>Filters</h2>
+    <div class="filter-group">
+      <label for="category-filter">Selection:</label>
+      <select id="category-filter">
+        <option value="all">all</option>
+
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="price-filter">Max price:</label>
+      <input type="range" id="price-filter" min="0" max="1000" step="10" value="1000">
+      <span id="price-value">$1000</span>
+    </div>
+    <div class="filter-group">
+      <label for="sort-by">Filter by:</label>
+      <select id="sort-by">
+        <option value="default">Default</option>
+        <option value="price-asc">Price (low to high)</option>
+        <option value="price-desc">Price (high to low)</option>
+        <option value="name-asc">Nombre (A-Z)</option>
+        <option value="name-desc">Nombre (Z-A)</option>
+      </select>
+    </div>
+  </aside>
+
+  <main>
+    <section class="products-grid" id="products-container">
+     
+    </section>
+  </main>
+
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Tu Carrito</h2>
+      <button id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+     
+    </div>
+    <div class="cart-total">
+      <p>Total: <span id="cart-total-amount">$0.00</span></p>
+      <button id="checkout-btn">end purcharse</button>
+    </div>
+  </aside>
+
+  <script src="scripts/api.js"></script>
+  <script src="scripts/cart.js"></script>
+  <script src="scripts/dom.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
