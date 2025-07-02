@@ -2,6 +2,7 @@ import { addToCart, updateQuantity, removeFromCart, calculateTotal, getCartItems
 import { fetchProducts, fetchCategories } from './api.js';
 
 
+
 export const renderProducts = (products) => {
   const container = document.getElementById('products-container');
   container.innerHTML = '';
@@ -29,7 +30,9 @@ const createProductCard = (product) => {
       <p class="product-category">${product.category}</p>
       <p class="product-price">$${product.price.toFixed(2)}</p>
       <button class="add-to-cart" data-id="${product.id}">Add to cart</button>
-    </div>
+      <br>
+      <button class="add-to-fav" data-id="${product.id}">add to favorites</button>    
+      </div>
   `;
   
 
@@ -166,3 +169,36 @@ export const setupPriceFilter = () => {
     priceValue.textContent = `$${priceFilter.value}`;
   });
 };
+
+export const renderfavItems = () => {
+  const container = document.getElementById('fav-items');
+  const cartItems = getfavItems();
+  
+  container.innerHTML = '';
+  
+  if (cartItems.length === 0) {
+    container.innerHTML = '<p class="message">your favorite items</p>';
+    return;
+  }
+  
+  cartItems.forEach(item => {
+    const favItemElement = createfavItemElement(item);
+    container.appendChild(favItemElement);
+  });
+  }
+  export const renderbuyItems = () => {
+    const container = document.getElementById('buy-items');
+    const cartItems = getfavItems();
+    
+    container.innerHTML = '';
+    
+    if (cartItems.length === 0) {
+      container.innerHTML = '<p class="message">your purchase history</p>';
+      return;
+    }
+    
+    cartItems.forEach(item => {
+      const favItemElement = createfavItemElement(item);
+      container.appendChild(favItemElement);
+    });
+    }  

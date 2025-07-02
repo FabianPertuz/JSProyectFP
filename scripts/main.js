@@ -3,6 +3,7 @@ import { renderProducts, renderCartItems, initCategoryFilter, setupCartToggle, s
 import { updateCartCount } from './cart.js';
 
 
+
 let allProducts = [];
 
 

@@ -25,7 +25,7 @@ export const addToCart = (product) => {
   }
   
   saveCart();
-  showMessage(`${product.title} agregado al carrito`, 'success');
+  showMessage(`${product.title} added to cart`, 'success');
 };
 
 

@@ -50,7 +50,25 @@ header {
   cursor: pointer;
   font-weight: bold;
 }
+.fav {
+  background-color: #3f3ce7;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 
+}
+.savehis{
+  background-color: #3ce753;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
 .filters {
   background-color: #ecf0f1;
   padding: 1rem;
@@ -144,8 +162,21 @@ header {
 .add-to-cart:hover {
   background-color: #2980b9;
 }
+.add-to-fav{
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background-color 0.3s;
+}
+.add-to-fav:hover{
+  background-color: #3f3ce7;
+}
 
-/* Carrito */
+
 .cart-sidebar {
   position: fixed;
   top: 0;
